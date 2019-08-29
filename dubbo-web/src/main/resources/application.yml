@@ -1,0 +1,24 @@
+server:
+  port: 7778
+  
+dubbo:
+  application:
+    name: dubbo-web
+  registry:
+    address: zookeeper://192.168.72.130:2181
+    protocol: zookeeper
+  protocol:
+    name: dubbo
+    port: -1
+
+spring:
+  application:
+    name: dubbo-web
+  jpa:
+    database: MYSQL
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://172.17.3.111:3306/dubboseata?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 111111
+    driver-class-name: com.mysql.cj.jdbc.Driver   

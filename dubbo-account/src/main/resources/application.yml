@@ -1,0 +1,43 @@
+server:
+  port: 7789
+
+admin:
+  config-center: zookeeper://192.168.72.130:2181
+  
+dubbo:
+  application:
+    name: user-provider
+  registry:
+    address: zookeeper://192.168.72.130:2181
+    protocol: zookeeper
+  metadata-report:
+    address: zookeeper://192.168.72.130:2181
+  protocol:
+    name: dubbo
+    port: -1 
+ 
+spring:
+  application:
+    name: dubbo-user
+  jpa:
+    database: MYSQL
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://172.17.3.111:3306/dubboseata?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 111111
+    driver-class-name: com.mysql.cj.jdbc.Driver 
+    
+mybatis-plus:
+  type-aliases-package: com.favccxx.dubbo.model.*
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+  global-config:
+    db-config:
+      id-type: auto
+      table-underline: true
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+    
