@@ -29,13 +29,13 @@ Seata, 阿里开源的分布式事务管理组件
 
 6. 测试
 
-http://172.17.3.111:7778/purchase?username=admin&productCode=C201909010001&amount=2.01
+http://xx.xx.xx.xx:7778/purchase?username=admin&productCode=C201909010001&amount=2.01
 
 # 使用说明
 
 ## Dubbo 知识点
 
-![image](https://github.com/favccxx/HelloDubbo/raw/master/images/dubbo.png)
+![image](https://github.com/favccxx/FavDubbo/raw/master/images/dubbo.png)
 
 1. Dobbo Provider如果在接口中声明了组和版本等信息，那么在调用的使用，也必须指明服务的组和版本，否则会报错。
 
@@ -69,7 +69,7 @@ RM(Resource Manager)：资源管理器，控制分支事务，负责分支注册
 TC(Transaction Coordinator)：事务协调器，维护全局事务的运行状态，负责协调并驱动全局事务的提交或回滚。
 
 Seata 架构
-![image](https://github.com/favccxx/HelloDubbo/raw/master/images/Seata.png)
+![image](https://github.com/favccxx/FavDubbo/raw/master/images/Seata.png)
 
 Seata配置
 ```java 
